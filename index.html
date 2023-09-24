@@ -26,17 +26,23 @@
         }
 
         #graphviz {
-            width: 100%;
-            height: 80vh; /* 80% of the viewport height */
-            border-top: 1px solid #eee; /* A light border at the top */
+            width: 800;
+            height: 450; /* 80% of the viewport height */
+            border: 1px solid #c5bebe; /* A light border at the top */
+        }
+
+        circle {
+            fill: rgb(207, 35, 35);
         }
 
     </style>
     <script src="https://d3js.org/d3.v7.min.js"></script>
 </head>
 <body>
-    <div class="title-container"><h2>IMDB Movies Graph</h2></div> 
-    <div id="graphviz"></div>
+    <div class="title-container"><h2>IMDB Movies Graph</h2></div>
+    <div id="graphviz" width="800" height="450"> </div>
+    <button id="addNode">Add Node</button>
+    <button id="addEdge">Add Edge</button>
     <button id="computeStats">Compute statistics</button>
     <div id="stats">
         <p>Average Node Degree: <span id="avgDegree"></span></p>
@@ -44,5 +50,6 @@
         <p>Graph Density: <span id="graphDensity"></span></p>
     </div>
     <script type="module" src="index.js"></script>
+    
 </body>
 </html>
